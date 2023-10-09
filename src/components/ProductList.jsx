@@ -57,11 +57,14 @@ export const ProductList = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-list">
+      <div className="ppal">
+
       <h1>Products List</h1>
-      <Link className="btn" to="/create-new-product">
+      <Link className="btn btt" to="/create-new-product">
         + New Product
       </Link>
+      </div>
         <table>
           <thead>
             <tr>
@@ -78,7 +81,7 @@ export const ProductList = () => {
                 <td>{product.name}</td>
                 <td>{product.quantity}</td>
                 <td>{product.comment}</td>
-                <td>
+                <td className="buttons">
                   <Link
                     to={`/edit-id:/${product.id}`}
                     className="btn fa-regular fa-pen-to-square"

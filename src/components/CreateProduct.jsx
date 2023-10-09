@@ -32,7 +32,7 @@ export const CreateProduct = () => {
   const [quantity, setQuantity] = useState('');
 
   return (
-    <div className="container">
+    <div className="container-list">
       <h1>Create new Product</h1>
       <form onSubmit={handleSubmit} className="create-form">
         <div>
