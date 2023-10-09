@@ -1,17 +1,21 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import {ProductList} from './components/ProductList.jsx'
+import { EditProduct } from "./components/EditProduct";
+import { CreateProduct } from "./components/CreateProduct";
+
 function App() {
-  const [count, setCount] = useState(0);
 
   
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<ProductList/>}/>
+          <Route path="/edit-id:/:id" element={<EditProduct/>}/>
+          <Route path="/create-new-product" element={<CreateProduct/>}/>
         </Routes>
       </BrowserRouter>
     </>
