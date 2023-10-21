@@ -57,45 +57,43 @@ export const ProductList = () => {
   }, []);
 
   return (
-    <div className="container-list">
-      <div className="ppal">
-
-      <h1>Products List</h1>
-      <Link className="btn btt" to="/create-new-product">
-        + New Product
-      </Link>
+    <div className="container-div">
+      <div className="headers">
+        <h1>Products List</h1>
+        <Link className="btn btt" to="/create-new-product">
+          + New Product
+        </Link>
       </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Producto</th>
-              <th>Cantidad</th>
-              <th>Comentario</th>
-              <th>Editar</th>
-              <th></th>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Comentario</th>
+            <th>Editar</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((product) => (
+            <tr key={product.id}>
+              <td>{product.name}</td>
+              <td>{product.quantity}</td>
+              <td>{product.comment}</td>
+              <td className="buttons">
+                <Link
+                  to={`/edit-id:/${product.id}`}
+                  className="btn fa-regular fa-pen-to-square"
+                ></Link>
+                <button
+                  className="btn fa-solid fa-trash"
+                  onClick={() => confirmDelete(product.id)}
+                ></button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {products.map((product) => (
-              <tr key={product.id}>
-                <td>{product.name}</td>
-                <td>{product.quantity}</td>
-                <td>{product.comment}</td>
-                <td className="buttons">
-                  <Link
-                    to={`/edit-id:/${product.id}`}
-                    className="btn fa-regular fa-pen-to-square"
-                  ></Link>
-                  <button
-                    className="btn fa-solid fa-trash"
-                    onClick={() => confirmDelete(product.id)}
-                  >
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

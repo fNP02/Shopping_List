@@ -43,7 +43,7 @@ export const EditProduct = () => {
   };
 
   return (
-    <div className="container-list">
+    <div className="container-div">
       <h1>Create new Product</h1>
       <form onSubmit={handleSubmit} className="create-form">
         <div>
