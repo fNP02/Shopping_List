@@ -71,7 +71,6 @@ export const ProductList = () => {
             <th>Quantity</th>
             <th>Comment</th>
             <th>Edit</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
