@@ -67,10 +67,10 @@ export const ProductList = () => {
       <table>
         <thead>
           <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Comentario</th>
-            <th>Editar</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Comment</th>
+            <th>Edit</th>
             <th></th>
           </tr>
         </thead>
